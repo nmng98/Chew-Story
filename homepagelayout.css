@@ -1,0 +1,56 @@
+h1 {
+	text-align: center;
+	font-family: avant_garde;
+	padding-bottom: 15px;
+}
+    .jumbotron {
+      background: url('choco.jpg') no-repeat center center;
+      background-size: 1200px 400px;
+      padding-top: 10%;
+      padding-bottom: 20%;
+	  width: 100%;
+	  height: 80px;
+	  margin-top: 0px;
+	  float: auto;
+	  border:5px solid #fff;
+    }
+/* unvisited link */
+a:link {
+    color: crimson;
+}
+
+/* visited link */
+a:visited {
+    color: salmon;
+}
+
+/* mouse over link */
+a:hover {
+    color: lightsteelblue;
+}
+
+/* selected link */
+a:active {
+    color: lightsteelblue;
+}
+
+h2 {
+	padding: 0;
+	width: 100%;
+	height: 50px;
+	margin-top: 0px;
+	float: left;
+}
+
+.tab-content {
+	background-color: white;
+	padding: 20px;
+}
+.nav nav-tabs {
+	background-color: white;
+}
+
+.nav>li>a {
+    background-color: #fff !important;
+ 
+}
