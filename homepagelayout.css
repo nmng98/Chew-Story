@@ -3,17 +3,17 @@ h1 {
 	font-family: avant_garde;
 	padding-bottom: 15px;
 }
-    .jumbotron {
-      background: url('choco.jpg') no-repeat center center;
-      background-size: 1200px 400px;
-      padding-top: 10%;
-      padding-bottom: 20%;
-	  width: 100%;
-	  height: 80px;
-	  margin-top: 0px;
-	  float: auto;
-	  border:5px solid #fff;
-    }
+.jumbotron {
+      	background: url('choco.jpg') no-repeat center center;
+      	background-size: 1200px 400px;
+      	padding-top: 10%;
+      	padding-bottom: 20%;
+	width: 100%;
+	height: 80px;
+	margin-top: 0px;
+	float: auto;
+	border:5px solid #fff;
+}
 /* unvisited link */
 a:link {
     color: crimson;
