@@ -1,4 +1,4 @@
-Chew-Story: a mock website that allows users to share, save, like, and create recipes
+#Chew-Story: a mock website that allows users to share, save, like, and create recipes
 
 HOMEPAGE:
 homepage.html
