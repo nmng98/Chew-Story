@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CHEW STORY</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel = "stylesheet" href = "homepagedesign.css">
+  <h1>CHEWSTORY</h1>
+  <style>
+  
+  html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+  img { 
+	max-width:100%;
+	max-height: 100% 
+  }
+
+a {
+    -webkit-transition: all 150ms ease;
+	-moz-transition: all 150ms ease;
+	-ms-transition: all 150ms ease;
+	-o-transition: all 150ms ease;
+	transition: all 150ms ease; 
+	}
+    
+a:hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE 8 */
+    filter: alpha(opacity=50); /* IE7 */
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+
+
+body{
+    border-top:0;
+    background:linear-gradient(left,#c4e17f,#c4e17f 12.5%,#f7fdca 12.5%,#f7fdca 25%,#fecf71 25%,#fecf71 37.5%,#f0776c 37.5%,#f0776c 50%,#db9dbe 50%,#db9dbe 62.5%,#c49cde 62.5%,#c49cde 75%,#669ae1 75%,#669ae1 87.5%,#62c2e4 87.5%,#62c2e4);background-image:-moz-linear-gradient(left,#c4e17f,#c4e17f 12.5%,#f7fdca 12.5%,#f7fdca 25%,#fecf71 25%,#fecf71 37.5%,#f0776c 37.5%,#f0776c 50%,#db9dbe 50%,#db9dbe 62.5%,#c49cde 62.5%,#c49cde 75%,#669ae1 75%,#669ae1 87.5%,#62c2e4 87.5%,#62c2e4);background-image:-o-linear-gradient(left,#c4e17f,#c4e17f 12.5%,#f7fdca 12.5%,#f7fdca 25%,#fecf71 25%,#fecf71 37.5%,#f0776c 37.5%,#f0776c 50%,#db9dbe 50%,#db9dbe 62.5%,#c49cde 62.5%,#c49cde 75%,#669ae1 75%,#669ae1 87.5%,#62c2e4 87.5%,#62c2e4);background-image:linear-gradient(to right,#c4e17f,#c4e17f 12.5%,#f7fdca 12.5%,#f7fdca 25%,#fecf71 25%,#fecf71 37.5%,#f0776c 37.5%,#f0776c 50%,#db9dbe 50%,#db9dbe 62.5%,#c49cde 62.5%,#c49cde 75%,#669ae1 75%,#669ae1 87.5%,#62c2e4 87.5%,#62c2e4)
+}
+
+.thumbnails li> .fff .caption { 
+    background:#fff !important; 
+    padding:10px
+}
+
+/* Page Header */
+.page-header {
+    background: #f9f9f9;
+    margin: -30px -40px 40px;
+    padding: 20px 40px;
+    border-top: 4px solid #ccc;
+    color: #999;
+    text-transform: uppercase;
+}
+    
+.page-header h3 {
+    line-height: 0.88rem;
+    color: #000;
+}
+
+ul.thumbnails { 
+    margin-bottom: 0px;
+}
+
+
+
+/* Thumbnail Box */
+.caption h4 {
+    color: #444;
+}
+
+.caption p {  
+    color: #999;
+}
+
+
+
+/* Carousel Control */
+.control-box {
+    text-align: right;
+    width: 100%;
+}
+.carousel-control{
+    background: #666;
+    border: 0px;
+    border-radius: 0px;
+    display: inline-block;
+    font-size: 34px;
+    font-weight: 200;
+    line-height: 18px;
+    opacity: 0.5;
+    padding: 4px 10px 0px;
+    position: static;
+    height: 30px;
+    width: 15px;
+}
+
+
+
+/* Mobile Only */
+@media (max-width: 767px) {
+    .page-header, .control-box {
+        text-align: center;
+    } 
+}
+@media (max-width: 479px) {
+    .caption {
+        word-break: break-all;
+    }
+}
+
+
+li { list-style-type:none;}
+
+::selection { background: #ff5e99; color: #FFFFFF; text-shadow: 0; }
+::-moz-selection { background: #ff5e99; color: #FFFFFF; }
+
+  }
+  	body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+	
+	
+}
+	html {
+
+    height: 100%;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    margin:0;
+	padding:0;
+	background-color:black;
+	
+    
+   
+	
+
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+	position: absolute;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px !important;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+	
+	
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px; position: absolute;}
+  .sidenav a {font-size: 18px;}
+  
+}
+
+  </style>
+</head>
+<body>
+	<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" 
+  onclick="closeNav()">×</a>
+  <br>
+  <img src="usericon.png" alt="cool" height="150" width="150" align="middle">
+  <br>
+  <a href="file:///Volumes/NICOLE/Chew%20Story/ACCOUNT%20PAGE/accountlayout.html">Account</a>
+  <a href="#">Create</a>
+  <a href="#">Discover</a>
+  <a href="file:///Volumes/NICOLE/Chew%20Story/DONATION%20PAGE/donationlayout.html">Donate</a>
+
+</div>
+
+<div id="main">
+	<h2 <span style="font-size:50px;cursor:pointer; position:absolute;float:left; color: grey;" onclick="openNav()">☰</span></h2>
+</div>
+
+
+<div class="container">
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="col-xs-12">
+	 <div class="page-header">
+        <h3>TOP RATED RECIPES</h3>
+        <p> WEEK OF AUG 8 </p>
+    </div>
+	<div class="carousel slide" id="myCarousel">
+        <div class="carousel-inner">
+            <div class="item active">
+                    <ul class="thumbnails">
+                        <li class="col-sm-3">
+    						<div class="fff">
+								<div class="thumbnail">
+									<a href="#"><img src="mousse.jpg" alt="mousse"></a>
+								</div>
+								<div class="caption">
+									<h4>Chocolate Velvet Mousse</h4>
+									<p>Indulge in a to-die-for dessert that’s made with just five ingredients!</p>
+									<a class="btn btn-mini" href="file:///Volumes/NICOLE/chocolatemousse.html">» Read More</a>
+								</div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+							<div class="fff">
+								<div class="thumbnail">
+									<a href="#"><img src="yummy.jpg" alt="mushroom"></a>
+								</div>
+								<div class="caption">
+									<h4>Baked Mushroom Mac ‘n’ Cheese</h4>
+									<p>Good for lunch or dinner, this mac N cheese bursts with flavor and adds vegetables to a family favorite!</p>
+									<a class="btn btn-mini" href="file:///Users/NicoleNg/Library/Containers/com.apple.mail/Data/Library/Mail%20Downloads/853FF073-DB75-4826-9B34-99F7F45737A1/Recipe%20Pages/bakedmac.html">» Read More</a>
+								</div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+							<div class="fff">
+								<div class="thumbnail">
+									<a href="#"><img src="milk.jpg" alt="milk"></a>
+								</div>
+								<div class="caption">
+									<h4>Halloween Mix Milkshake</h4>
+									<p>Slurp up your favorite candies in milkshake form with these decadent frozen treats!</p>
+									<a class="btn btn-mini" href="file:///Users/NicoleNg/Library/Containers/com.apple.mail/Data/Library/Mail%20Downloads/853FF073-DB75-4826-9B34-99F7F45737A1/Recipe%20Pages/candymilk.html">» Read More</a>
+								</div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+							<div class="fff">
+								<div class="thumbnail">
+									<a href="#"><img src="herb.jpg" alt="herb"></a>
+								</div>
+								<div class="caption">
+									<h4>Herb Cheese Pizza</h4>
+									<p>A delicious and easy pizza for a quick weeknight meal that the kids will love!</p>
+									<a class="btn btn-mini" href="file:///Volumes/NICOLE/herbpizza.html">» Read More</a>
+								</div>
+                            </div>
+                        </li>
+                    </ul>
+              </div><!-- /Slide1 --> 
+            <div class="item">
+                    <ul class="thumbnails">
+                        <li class="col-sm-3">
+							<div class="fff">
+								<div class="thumbnail">
+									<a href="#"><img src="berry.jpg" alt="berry"></a>
+								</div>
+								<div class="caption">
+									<h4>Berry Salad</h4>
+									<p>Do you have any recipes that continuously make an appearance on the table for certain holidays? 
+									For me, this Berries and Feta Salad is one of them.</p>
+									<a class="btn btn-mini" href="#">» Read More</a>
+								</div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+							<div class="fff">
+								<div class="thumbnail">
+									<a href="#"><img src="maple3.jpg" alt="maple"></a>
+								</div>
+								<div class="caption">
+									<h4>Maple Souffle</h4>
+									<p>Their only reaction will be, “Something this good was made of nothing but maple syrup and eggs?  I don’t believe you.”</p>
+									<a class="btn btn-mini" href="file:///Volumes/NICOLE/maplesouffle.html">» Read More</a>
+								</div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+							<div class="fff">
+								<div class="thumbnail">
+									<a href="#"><img src="POKEEE.jpg" alt="poke"></a>
+								</div>
+								<div class="caption">
+									<h4>Poke Bowl</h4>
+									<p>Get in on the latest dining trend with this easy tuna poke bowl!</p>
+									<a class="btn btn-mini" href="file:///Users/NicoleNg/Library/Containers/com.apple.mail/Data/Library/Mail%20Downloads/F9C39B3E-71A9-440D-B0B6-AAD4A2EE50DB/Recipe%20Pages/pokebowl.html">» Read More</a>
+								</div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+							<div class="fff">
+								<div class="thumbnail">
+									<a href="#"><img src="cookie.jpg" alt="cookie"></a>
+								</div>
+								<div class="caption">
+									<h4>Cookies N Cream Oreo Bark</h4>
+									<p>A 20 minute, 2 ingredient, sweet and simple dessert filled with Oreo goodness. 
+									Yes, another fast and easy dessert recipe that’s perfect for your holiday baking.</p>
+									<a class="btn btn-mini" href="#">» Read More</a>
+								</div>
+                            </div>
+                        </li>
+                    </ul>
+              </div><!-- /Slide2 --> 
+            <div class="item">
+                    <ul class="thumbnails">
+                        <li class="col-sm-3">	
+							<div class="fff">
+								<div class="thumbnail">
+									<a href="#"><img src="rios.jpg" alt="risotto"></a>
+								</div>
+								<div class="caption">
+									<h4>Red Wine Risotto</h4>
+									<p>This red wine risotto recipe puts a fresh twist on classic risotto. Fresh thyme and sautéed mushrooms lend a ton of flavor. Vegetarian.</p>
+									<a class="btn btn-mini" href="file:///Users/NicoleNg/Library/Containers/com.apple.mail/Data/Library/Mail%20Downloads/F9C39B3E-71A9-440D-B0B6-AAD4A2EE50DB/Recipe%20Pages/riscotto.html">» Read More</a>
+								</div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+							<div class="fff">
+								<div class="thumbnail">
+									<a href="#"><img src="egg.jpg" alt="egg"></a>
+								</div>
+								<div class="caption">
+									<h4>Egg Tarts</h4>
+									<p>This popular dessert features a creamy silky egg custard that is baked in a crispy buttery puff pastry shell!</p>
+									<a class="btn btn-mini" href="file:///Volumes/NICOLE/eggtart.html">» Read More</a>
+								</div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+							<div class="fff">
+								<div class="thumbnail">
+									<a href="#"><img src="tacos.jpg" alt="tacos"></a>
+								</div>
+								<div class="caption">
+									<h4>Ground Beef Tacos</h4>
+									<p>Dinner ready in 25 minutes! 
+									Enjoy these tacos made using ground beef, cheese, lettuce and tomatoes that are served with salsa.</p>
+									<a class="btn btn-mini" href="file:///Users/NicoleNg/Library/Containers/com.apple.mail/Data/Library/Mail%20Downloads/F9C39B3E-71A9-440D-B0B6-AAD4A2EE50DB/Recipe%20Pages/taco.html">» Read More</a>
+								</div>
+                            </div>
+                        </li>
+                        <li class="col-sm-3">
+							<div class="fff">
+								<div class="thumbnail">
+									<a href="#"><img src=PEACH.jpg alt="peach"></a>
+								</div>
+								<div class="caption">
+									<h4>Peach Cobbler Coffee Cake</h4>
+									<p>This Peach Cobbler Coffee Cake combines rich, moist cake with delicious fresh peaches and a sweet cinnamon drizzle. 
+									THE perfect coffee cake for spring, and destined to become a family favorite!</p>
+									<a class="btn btn-mini" href="file:///Users/NicoleNg/Library/Containers/com.apple.mail/Data/Library/Mail%20Downloads/F9C39B3E-71A9-440D-B0B6-AAD4A2EE50DB/Recipe%20Pages/peach.html">» Read More</a>
+								</div>
+                            </div>
+                        </li>
+                    </ul>
+              </div><!-- /Slide3 --> 
+        </div>
+        
+       
+	   <nav>
+			<ul class="control-box pager">
+				<li><a data-slide="prev" href="#myCarousel" class=""><i class="glyphicon glyphicon-chevron-left"></i></a></li>
+				<li><a data-slide="next" href="#myCarousel" class=""><i class="glyphicon glyphicon-chevron-right"></i></li>
+			</ul>
+		</nav>
+	   <!-- /.control-box -->   
+                              
+    </div><!-- /#myCarousel -->
+        
+</div><!-- /.col-xs-12 -->          
+
+</div><!-- /.container -->
+<script>
+	function openNav() {
+		document.getElementById("mySidenav").style.width = "250px";
+		document.getElementById("main").style.marginLeft = "250px";
+		document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+	function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+		document.getElementById("main").style.marginLeft= "0";
+		document.body.style.backgroundColor = "white";
+}
+	 $(document).ready(function() {
+    $('.carousel').carousel({
+      interval: 6000
+    })
+  });
+
+</script>
+</body>
+</html>
+
