@@ -1,0 +1,327 @@
+<html lang="en">
+<head>
+  <title>Recipe</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="riscotto1.css">
+  <h1> CHEWSTORY </h1>
+</head>
+<style>
+  html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+	body{
+	font-family: "Lato", sans-serif;
+	background:#c4e17f;
+    background-image:-webkit-linear-gradient(left,#c4e17f,#c4e17f 12.5%,#f7fdca 12.5%,#f7fdca 25%,#fecf71 25%,#fecf71 37.5%,#f0776c 37.5%,#f0776c 50%,#db9dbe 50%,#db9dbe 62.5%,#c49cde 62.5%,#c49cde 75%,#669ae1 75%,#669ae1 87.5%,#62c2e4 87.5%,#62c2e4);background-image:-moz-linear-gradient(left,#c4e17f,#c4e17f 12.5%,#f7fdca 12.5%,#f7fdca 25%,#fecf71 25%,#fecf71 37.5%,#f0776c 37.5%,#f0776c 50%,#db9dbe 50%,#db9dbe 62.5%,#c49cde 62.5%,#c49cde 75%,#669ae1 75%,#669ae1 87.5%,#62c2e4 87.5%,#62c2e4);background-image:-o-linear-gradient(left,#c4e17f,#c4e17f 12.5%,#f7fdca 12.5%,#f7fdca 25%,#fecf71 25%,#fecf71 37.5%,#f0776c 37.5%,#f0776c 50%,#db9dbe 50%,#db9dbe 62.5%,#c49cde 62.5%,#c49cde 75%,#669ae1 75%,#669ae1 87.5%,#62c2e4 87.5%,#62c2e4);background-image:linear-gradient(to right,#c4e17f,#c4e17f 12.5%,#f7fdca 12.5%,#f7fdca 25%,#fecf71 25%,#fecf71 37.5%,#f0776c 37.5%,#f0776c 50%,#db9dbe 50%,#db9dbe 62.5%,#c49cde 62.5%,#c49cde 75%,#669ae1 75%,#669ae1 87.5%,#62c2e4 87.5%,#62c2e4)
+	}
+	
+/*  bhoechie tab */
+div.bhoechie-tab-container{
+  z-index: 10;
+  background-color: #ffffff;
+  padding: 0 !important;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  border:1px solid #ddd;
+  margin-top: 20px;
+  margin-left: 50px;
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  -moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  background-clip: padding-box;
+  opacity: 0.97;
+  filter: alpha(opacity=97);
+}
+div.bhoechie-tab-menu{
+  float:right;    
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group{
+  margin-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group>a{
+  margin-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group>a .glyphicon,
+div.bhoechie-tab-menu div.list-group>a .fa {
+  color: #16a085;
+}
+div.bhoechie-tab-menu div.list-group>a:first-child{
+  border-top-right-radius: 0;
+  -moz-border-top-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a:last-child{
+  border-bottom-right-radius: 0;
+  -moz-border-bottom-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a.active,
+div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
+div.bhoechie-tab-menu div.list-group>a.active .fa{
+  background-color: #16a085;
+  background-image: #16a085;
+  color: #ffffff;
+}
+div.bhoechie-tab-menu div.list-group>a.active:before{
+  content: '';
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  margin-top: -13px;
+  border-left: 0;
+  border-bottom: 13px solid transparent;
+  border-top: 13px solid transparent;
+  border-right: 10px solid #16a085;
+}
+
+div.bhoechie-tab-content{
+  background-color: #ffffff;
+  /* border: 1px solid #eeeeee; */
+  padding-left: 20px;
+  padding-top: 10px;
+  
+}
+
+div.bhoechie-tab div.bhoechie-tab-content:not(.active){
+  display: none;
+}
+
+	html {
+
+    height: 100%;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    margin:0;
+	padding:0;
+	background-color:black;
+	
+    
+   
+	
+
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+	position: absolute;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px !important;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+	
+	
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px; position: absolute;}
+  .sidenav a {font-size: 18px;}
+  
+}
+
+  </style>
+</head>
+<body>
+	<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" 
+  onclick="closeNav()">×</a>
+  <br>
+  <img src="usericon.png" alt="cool" height="150" width="150" align="middle">
+  <br>
+  <a href="#">Account</a>
+  <a href="#">Create</a>
+  <a href="#">Discover</a>
+  <a href="#">Donate</a>
+
+</div>
+
+<div id="main">
+	<h2 <span style="font-size:50px;cursor:pointer; position:absolute;float:left; color: grey;" onclick="openNav()">☰</span></h2>
+</div>
+<p> RED WINE RISOTTO </p>
+<img src="mac.jpg" alt="mac" style="height:375; width:500">
+	<br>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-5 col-md-5 col-sm-8 col-xs-9 bhoechie-tab-container"  style="width : 500px;">
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 bhoechie-tab-menu">
+				  <div class="list-group">
+					<a href="#" class="list-group-item active text-center">
+					  <h5 class="glyphicon glyphicon-align-center"></h5><br/>Description
+					</a>
+					<a href="#" class="list-group-item text-center">
+					  <h5 class="glyphicon glyphicon-grain"></h5><br/>Ingredients
+					</a>
+					<a href="#" class="list-group-item text-center">
+					  <h5 class="glyphicon glyphicon-list-alt"></h5><br/>Directions
+					</a>
+					<a href="#" class="list-group-item text-center">
+					  <h5 class="glyphicon glyphicon-cutlery"></h5><br/>Nutritional Information
+					</a>
+					<a href="#" class="list-group-item text-center">
+					  <h5 class="glyphicon glyphicon-share-alt"></h5><br/>Share
+					</a>
+				  </div>
+				</div>
+				<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 bhoechie-tab">
+					<!-- flight section -->
+					<div class="bhoechie-tab-content active">
+						<center>
+						  <h2 class="margin-top:0;color:#16a085"></h2>
+						  <h3 style="margin-top: 0;color:#16a085">Description</h3>
+						  <h4 style="margin-top: 0;color:#16a085">Perfect for your dinner dates as you enjoy this fancy dish.</h4>
+						</center>
+					</div>
+					<!-- train section -->
+					<div class="bhoechie-tab-content">
+						<center>
+						  <h2 class="margin-top: 0;color:#16a085"></h2>
+						  <h3 style="margin-top: 0;color:#16a085">Ingredients</h3>
+						  <h4 style="margin-top:0;color:#16a085">
+							<p class="big">	
+								<ul>
+									<li>3 1/2 cups canned low-salt chicken broth</li>
+									<li>3 tablespoons unsalted butter</li>
+									<li>1 cup finely chopped onion</li>
+									<li>2 garlic cloves, minced</li>
+									<li>1 cup arborio rice, or medium-grain white rice</li>
+									<li>1/2 cup dry red wine</li>
+									<li>1/3 cup frozen peas, defrosted, optional</li>
+									<li>1/4 cup chopped fresh Italian parsley leaves</li>
+									<li>1/2 cup grated Parmesan, plus additional for garnish</li>
+									<li>Salt and freshly ground black pepper</li>
+								</ul>
+							 </p>
+						  </h4>
+							
+						</center>
+					</div>
+		
+					<!-- hotel search -->
+					<div class="bhoechie-tab-content">
+						<center>
+						 <h2 class="style=font-size:12em;color:#16a085"></h2>
+						 <h3 style="margin-top: 0;color:#16a085">Directions</h3>
+						 <h4 style="margin-top:0;color:#16a085">
+							<p class="big">
+								<ol>
+									<li>Bring the broth to a simmer over medium-high heat. Cover the broth and keep it warm over very low heat.</li>
+									<br>
+									<li>Melt the butter in a heavy large saucepan over medium heat. Add the onion and saute until translucent, about 8 minutes. Stir in the garlic and saute for 30 seconds. Stir in the rice and cook for about 2 minutes until the rice is toasted. Add the wine and stir until it is absorbed, about 1 minute. Add 3/4 cup of hot broth; simmer over medium-low heat until the liquid is absorbed, stirring often, about 6 minutes. Repeat, adding 3/4 cup of hot broth 2 more times, stirring often, about 12 minutes longer. At this point, the risotto can be made 4 hours ahead. Refrigerate the risotto (the rice will still be firm) and remaining broth, uncovered, until cool, then cover and keep them refrigerated until ready to proceed.</li>
+									<br>
+									<li>Bring the remaining broth to a simmer, then cover and keep it warm over very low heat. Stir 3/4 cup of hot broth into the partially cooked risotto over medium heat until the broth is absorbed and the risotto is hot, about 3 minutes. Add the remaining broth and simmer until the rice is just tender and the mixture is creamy, about 5 minutes longer. Stir in the peas and parsley. Add the 1/2 cup of Parmesan. Season, to taste, with salt and pepper. Spoon the risotto into bowls. Sprinkle additional cheese over and serve.</li>
+									<br>
+									<br>
+								</ol>
+							</p>
+						 </h4>
+						</center>
+					</div>
+					<div class="bhoechie-tab-content">
+						<center>
+						  <h2 class="margin-top: 0;color:#16a085"></h2>
+						  <h3 style="margin-top: 0;color:#16a085">Nutritional Information</h3>
+						  <h4 style="margin-top: 0;color:#16a085">
+							<p class="big">
+								<ul>
+									<li>Serving Size: 4</li> 
+									<br>
+									<li>Serving Calories: 500</li>  
+									<br>
+									<li>Calories from Fat: 240</li> 
+									<br>
+									<li>Total Fat: 30g</li>
+									<br>  
+									<li>Saturated Fat: 18g</li>
+									<br>
+									<li>Cholesterol: 95mg</li>
+									<br>
+									<li>Sodium: 1160mg</li>
+									<br>
+									<li>Total Carbohydrate: 130g</li>  
+									<br>
+									<li>Dietary Fiber: 1g</li>  
+									<br>
+									<li>Protein: 50g</li> 
+									<br>
+							  </ul>
+							<p>
+						</h4>
+					</center>
+					</div>
+					<div class="bhoechie-tab-content">
+						<center>
+						  <h2 class="margin-top: 0;color:#16a085"></h2>
+						  <h3 style="margin-top: 0;color:#16a085">Share</h3>
+						  <h4 style="margin-top: 0;color:#16a085">
+							<ul>
+								<li><a href="#" >Email</a></li>
+								<br>
+								<li><a href=https:"https://www.facebook.com/">Facebook</a></li>
+								<br>
+								<li><a href=https:"//twitter.com/?lang=en">Twitter</a></li>
+							</ul>
+						  </h4>
+						</center>
+					</div>
+				</div>
+			</div>
+	  </div>
+	</div>
+	<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+$(document).ready(function() {
+    $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+        e.preventDefault();
+        $(this).siblings('a.active').removeClass("active");
+        $(this).addClass("active");
+        var index = $(this).index();
+        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+    });
+});
+</script>
+</body>
+</html>
